@@ -175,9 +175,15 @@ ok($entry4->is_merge() && !$entry4->is_conflict());
 
 print "# Testing PCVSLib::Credentials\n";
 my $credentials_fail = PCVSLib::Credentials->new();
-eval { my $password_fail = $credentials_fail->get_password($root1) };
-ok($@ =~ /PCVSLIB::Credentials::get_password\(\): missing entry in/);
-
+my $home = $ENV{HOME};
+if ( -e "$home/.cvspass" ) {
+    eval { my $password_fail = $credentials_fail->get_password($root1) };
+    ok($@ =~ /PCVSLIB::Credentials::get_password\(\): missing entry in/);
+}
+else {
+    eval { my $password_fail = $credentials_fail->get_password($root1) };
+    ok($@ =~ /PCVSLIB::Credentials::parse_passfile\(\): can't open CVS password file/);
+}
 
 print "# Testing PCVSLib::LogHandle\n";
 my $fh1 = IO::File->new_tmpfile();
