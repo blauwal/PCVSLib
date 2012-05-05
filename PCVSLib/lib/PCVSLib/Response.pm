@@ -177,7 +177,7 @@ my %ResponseClassData = (
 );
 
 # class data accessor methods
-for my $datum (qw(valid_responses)) {
+for my $datum (('valid_responses')) {
     no strict "refs";
     *$datum = sub {
         shift; # ignore calling class/object
@@ -204,7 +204,7 @@ sub new
 
 #### instance accessors #####
 
-for my $datum qw(event_handler response_data io_handle) {
+for my $datum ('event_handler', 'response_data', 'io_handle') {
     no strict "refs";
     *$datum = sub {
         my $self = shift;

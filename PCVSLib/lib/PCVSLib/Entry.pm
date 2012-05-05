@@ -72,7 +72,7 @@ sub new
 
 #### instance accessors #####
 
-for my $datum qw(is_directory name version is_merge is_conflict options tag timestamp to_server is_resolved) {
+for my $datum ('is_directory', 'name', 'version', 'is_merge', 'is_conflict', 'options', 'tag', 'timestamp', 'to_server', 'is_resolved') {
     no strict "refs";
     *$datum = sub {
         my $self = shift;

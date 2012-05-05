@@ -54,7 +54,7 @@ sub new
 
 #### instance accessors #####
 
-for my $datum qw(local_directory repository name) {
+for my $datum ('local_directory', 'repository', 'name') {
     no strict "refs";
     *$datum = sub {
         my $self = shift;

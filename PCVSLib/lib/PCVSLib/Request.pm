@@ -58,7 +58,7 @@ sub new
 
 #### instance accessors #####
 
-for my $datum qw(request_data additional_data file) {
+for my $datum ('request_data', 'additional_data', 'file') {
     no strict "refs";
     *$datum = sub {
         my $self = shift;

@@ -64,7 +64,7 @@ sub new
 
 #### instance accessors #####
 
-for my $datum qw(path_name entry mode size io_handle) {
+for my $datum ('path_name', 'entry', 'mode', 'size', 'io_handle') {
     no strict "refs";
     *$datum = sub {
         my $self = shift;

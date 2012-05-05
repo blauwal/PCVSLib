@@ -76,7 +76,7 @@ sub new
 
 #### instance accessors #####
 
-for my $datum qw(event_handler io_handle file_list tag branch rev1 rev2 merge1 merge2 options comment recursive first_command root) {
+for my $datum ('event', 'handler', 'io_handle', 'file_list', 'tag', 'branch', 'rev1', 'rev2', 'merge1', 'merge2', 'options', 'comment', 'recursive', 'first_command', 'root') {
     no strict "refs";
     *$datum = sub {
         my $self = shift;

@@ -55,7 +55,7 @@ sub new
 
 #### instance accessors #####
 
-for my $datum qw(is_success message) {
+for my $datum ('is_success', 'message') {
     no strict "refs";
     *$datum = sub {
         my $self = shift;
@@ -104,7 +104,7 @@ sub new
     return $self;
 }
 
-for my $datum qw(module_expansion) {
+for my $datum ('module_expansion') {
     no strict "refs";
     *$datum = sub {
         my $self = shift;
@@ -112,7 +112,7 @@ for my $datum qw(module_expansion) {
     }
 }
 
-for my $datum qw(root) {
+for my $datum ('root') {
     no strict "refs";
     *$datum = sub {
         my $self = shift;

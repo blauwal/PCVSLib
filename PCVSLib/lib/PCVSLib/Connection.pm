@@ -59,7 +59,7 @@ sub new
     return $self;
 }
 
-for my $datum qw(root scrambled_password io_handle) {
+for my $datum ('root', 'scrambled_password', 'io_handle') {
     no strict "refs";
     *$datum = sub {
         my $self = shift;

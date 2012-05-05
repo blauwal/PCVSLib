@@ -50,7 +50,7 @@ sub new
 
 #### instance accessors #####
 
-for my $datum qw(handle logfile) {
+for my $datum ('handle', 'logfile') {
     no strict "refs";
     *$datum = sub {
         my $self = shift;

@@ -62,7 +62,7 @@ sub new
 
 #### instance accessors #####
 
-for my $datum qw(connection) {
+for my $datum ('connection') {
     no strict "refs";
     *$datum = sub {
         my $self = shift;

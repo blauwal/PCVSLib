@@ -79,7 +79,7 @@ sub new
 
 #### instance accessors #####
 
-for my $datum qw(directory is_leaf) {
+for my $datum ('directory', 'is_leaf') {
     no strict "refs";
     *$datum = sub {
         my $self = shift;
@@ -88,7 +88,7 @@ for my $datum qw(directory is_leaf) {
     }
 }
 
-for my $datum qw(entries repository root tag is_static) {
+for my $datum ('entries', 'repository', 'root', 'tag', 'is_static') {
     no strict "refs";
     *$datum = sub {
         my $self = shift;

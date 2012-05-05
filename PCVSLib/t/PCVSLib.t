@@ -38,7 +38,7 @@ use IO::File;
 use Cwd;
 use File::Compare;
 use File::Copy;
-use File::Temp qw(tempdir);
+use File::Temp ('tempdir');
 use PCVSLib::Root;
 use PCVSLib::Entry;
 use PCVSLib::Credentials;

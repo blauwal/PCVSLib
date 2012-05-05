@@ -57,7 +57,7 @@ sub new
 
 #### instance accessors #####
 
-for my $datum qw(passfile) {
+for my $datum ('passfile') {
     no strict "refs";
     *$datum = sub {
         my $self = shift;

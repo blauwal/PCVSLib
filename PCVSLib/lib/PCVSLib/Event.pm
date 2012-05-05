@@ -56,7 +56,7 @@ sub new
 
 #### instance accessors #####
 
-for my $datum qw(event_data) {
+for my $datum ('event_data') {
     no strict "refs";
     *$datum = sub {
         my $self = shift;

@@ -62,7 +62,7 @@ sub new
 
 #### instance accessors #####
 
-for my $datum qw(path) {
+for my $datum ('path') {
     no strict "refs";
     *$datum = sub {
         my $self = shift;

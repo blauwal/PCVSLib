@@ -61,7 +61,7 @@ sub new
 
 #### instance accessors #####
 
-for my $datum qw(method user host port root_dir) {
+for my $datum ('method', 'user', 'host', 'port', 'root_dir') {
     no strict "refs";
     *$datum = sub {
         my $self = shift;
