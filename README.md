@@ -2,28 +2,39 @@ PCVSLib version 0.90
 ====================
 
 PCVSLib is a pure perl implementation of the CVS client protocol. 
-It currently supports only a subset of of the specified requests 
-and responses, just enough to support the OpenOffice.org CWS tools. 
+
+It currently supports a subset of of the specified requests 
+and responses. Most notably, the "add" request for adding 
+untracked files to the repository is still missing.
+
+PCVSLib was part of the OpenOffice.org CWS tools back in the
+day when the project used CVS for version control.
 
 INSTALLATION
+------------
 
 To install this module type the following:
 
-   perl Makefile.PL
-   make
-   make test
-   make install
+<pre>
+perl Makefile.PL
+make
+make test
+make install
+</pre>
 
 DEPENDENCIES
+------------
 
 This module requires these other modules and libraries:
 
-  nothing which is not included in perl-5.6 or later,
-  a cvs command line client is needed for running the
+* nothing which is not included in perl-5.6 or later,
+* a cvs command line client is needed for running the
   test suite.
 
 COPYRIGHT AND LICENCE
+---------------------
 
+<pre>
 #*************************************************************************
 #
 # DO NOT ALTER OR REMOVE COPYRIGHT NOTICES OR THIS FILE HEADER.
@@ -50,3 +61,4 @@ COPYRIGHT AND LICENCE
 # LGPLv3 License.
 #
 #*************************************************************************
+</pre>
